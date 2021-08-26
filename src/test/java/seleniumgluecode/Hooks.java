@@ -14,7 +14,7 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        driverManager = DriverManagerFactory.getManager(DriverType.EDGE);
+        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
         driver.manage().window().maximize();
         driver.get("https://imalittletester.com");
