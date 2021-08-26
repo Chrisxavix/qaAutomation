@@ -1,27 +1,15 @@
 package seleniumgluecode;
 
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.bson.Document;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Test {
-
-    private ChromeDriver driver = Hooks.getDriver();
+    private WebDriver driver = Hooks.getDriver();
 
     @Given("^El usuario se encuentra en la pagina Home de imalittletester$")
     public void elUsuarioSeEncuentraEnLaPaginaHomeDeImalittletester() throws Throwable {
