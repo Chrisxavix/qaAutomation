@@ -21,14 +21,11 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Test {
 
-    private ChromeDriver driver;
+    private ChromeDriver driver = Hooks.getDriver();
 
     @Given("^El usuario se encuentra en la pagina Home de imalittletester$")
     public void elUsuarioSeEncuentraEnLaPaginaHomeDeImalittletester() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://imalittletester.com");
+        Assert.assertEquals("imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.", driver.getTitle());
     }
 
     @When("^Hace click sobre el titulo The little tester comics$")
