@@ -7,6 +7,7 @@ public class HomePage extends BasePage {
 
     private String titleHomePage = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";
     private By titleComicsLocator = By.id("menu-item-2008");
+    private By titleComicsLocatorError = By.id("menu-item-2009");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -28,5 +29,9 @@ public class HomePage extends BasePage {
 
     public void clickTitle() throws Exception {
         this.clickNew(titleComicsLocator);
+    }
+
+    public void clickTitleError() throws Exception {
+        this.clickNew(titleComicsLocatorError);
     }
 }

@@ -27,6 +27,11 @@ public class Test extends TestBase {
         homePage.clickTitle();
     }
 
+    @Then("^Generar error$")
+    public void generateError() throws Throwable {
+        homePage.clickTitleError();
+    }
+
     @Then("^Se debe redirigir a la pantalla Comics$")
     public void seDebeRedirigirAlaPantallaComics() throws Throwable {
         /* Usando Getters */
